@@ -1,46 +1,182 @@
-⬡ Marca D'água Pro
-Lei 9.610/98 · DMCA
-Identidade
-Seu nome / marca João Silva Fotografia
-Contato / site (opcional) @joaosilva.foto
-Plataforma
-Fotto Alboom Banlek Fotop Foco Radical
-Todas aceitam JPG com marca d'água aplicada antes do upload. A marca é removida automaticamente após a compra pelo cliente.
-Estilo da Marca D'água
-Grade distribuída Diagonal contínua Centro destrutivo Bordas + centro
-Aparência
-Cor do texto
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gerador de marca d'água profissional para fotógrafos. Compatível com Fotto, Alboom, Banlek, Fotop e Foco Radical. Proteção pela Lei 9.610/98.">
+  <title>Marca D'água Pro — Proteção Fotográfica</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+  <header>
+    <h1>⬡ Marca D'água Pro</h1>
+    <span class="badge">Lei 9.610/98 · DMCA</span>
+  </header>
 
+  <div class="layout">
 
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
 
-Opacidade
-35%
-Tamanho do texto
-26px
-Ângulo de rotação
--30°
-Espaçamento entre repetições
-180
-Texto legal
-Lei 9.610/98 aplicada automaticamente.
-Inclui: © nome · ano · referência legal · DMCA.
+      <div class="sidebar-section">
+        <div class="section-label">Identidade</div>
+        <div class="field-group">
+          <div>
+            <label for="authorName">Seu nome / marca</label>
+            <input type="text" id="authorName" value="João Silva Fotografia" placeholder="Nome do fotógrafo">
+          </div>
+          <div>
+            <label for="contact">Contato / site (opcional)</label>
+            <input type="text" id="contact" value="@joaosilva.foto" placeholder="@instagram ou site.com">
+          </div>
+        </div>
+      </div>
 
-Texto gerado: "© [Nome] [Ano] | Lei 9.610/98 | Uso não autorizado é crime"
-Fundo de demonstração
+      <div class="sidebar-section">
+        <div class="section-label">Plataforma</div>
+        <div class="platform-chips">
+          <span class="chip active">Fotto</span>
+          <span class="chip active">Alboom</span>
+          <span class="chip active">Banlek</span>
+          <span class="chip active">Fotop</span>
+          <span class="chip active">Foco Radical</span>
+        </div>
+        <p class="platform-note">
+          Todas aceitam JPG com marca d'água aplicada antes do upload. A marca é removida automaticamente após a compra.
+        </p>
+      </div>
 
+      <div class="sidebar-section">
+        <div class="section-label">Estilo da Marca D'água</div>
+        <div class="mode-toggle">
+          <button class="mode-btn active" onclick="app.setMode(this,'distributed')">Grade distribuída</button>
+          <button class="mode-btn" onclick="app.setMode(this,'diagonal')">Diagonal contínua</button>
+          <button class="mode-btn" onclick="app.setMode(this,'center')">Centro destrutivo</button>
+          <button class="mode-btn" onclick="app.setMode(this,'border')">Bordas + centro</button>
+        </div>
+      </div>
 
+      <div class="sidebar-section">
+        <div class="section-label">Aparência</div>
+        <div class="field-group">
 
+          <div>
+            <label>Cor do texto</label>
+            <div class="color-row" id="colorSwatches">
+              <div class="color-swatch active" style="background:#ffffff" onclick="app.setColor(this,'#ffffff')"></div>
+              <div class="color-swatch" style="background:#000000" onclick="app.setColor(this,'#000000')"></div>
+              <div class="color-swatch" style="background:#c8401a" onclick="app.setColor(this,'#c8401a')"></div>
+              <div class="color-swatch" style="background:#c9a84c" onclick="app.setColor(this,'#c9a84c')"></div>
+              <div class="color-swatch" style="background:#4a90d9" onclick="app.setColor(this,'#4a90d9')"></div>
+              <div class="color-swatch" style="background:#cccccc" onclick="app.setColor(this,'#cccccc')"></div>
+            </div>
+          </div>
 
+          <div>
+            <label>Opacidade</label>
+            <div class="slider-row">
+              <input type="range" id="opacity" min="10" max="90" value="35" oninput="app.updateSlider(this,'opVal','%')">
+              <span class="slider-val" id="opVal">35%</span>
+            </div>
+          </div>
 
+          <div>
+            <label>Tamanho do texto</label>
+            <div class="slider-row">
+              <input type="range" id="fontSize" min="12" max="60" value="26" oninput="app.updateSlider(this,'fsVal','px')">
+              <span class="slider-val" id="fsVal">26px</span>
+            </div>
+          </div>
 
-⬇ Baixar Marca D'água (PNG) 📄 Exportar instruções de uso
-Pré-visualização · 1200 × 800px ⤢ Expandir ⤡ Reduzir
+          <div>
+            <label>Ângulo de rotação</label>
+            <div class="slider-row">
+              <input type="range" id="angle" min="-60" max="60" value="-30" oninput="app.updateSlider(this,'angVal','°')">
+              <span class="slider-val" id="angVal">-30°</span>
+            </div>
+          </div>
 
-Resolução: 1200 × 800
-Formato: PNG (transparente)
-Compatível: Fotto · Alboom · Banlek · Fotop · Foco Radical
-⚠ Como usar nas plataformas
-Workflow recomendado: Aplique esta marca d'água sobre suas fotos antes do upload. Use Lightroom (exportar com marca d'água), Photoshop (batch action) ou Watermarkly.com (online gratuito). Todas as plataformas — Fotto, Alboom, Banlek, Fotop e Foco Radical — aceitam JPG com marca d'água já aplicada. A foto limpa fica no seu computador e é enviada ao cliente somente após a compra.  Proteção adicional: Grave seus metadados EXIF (nome, copyright, contato) antes do upload e mantenha o RAW original como prova de autoria — ele serve como documento em caso de disputa judicial com base na Lei 9.610/98.
+          <div>
+            <label>Espaçamento entre repetições</label>
+            <div class="slider-row">
+              <input type="range" id="spacing" min="80" max="400" value="180" oninput="app.updateSlider(this,'spVal','')">
+              <span class="slider-val" id="spVal">180</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-label">Texto legal</div>
+        <div class="legal-box">
+          <strong>Lei 9.610/98</strong> aplicada automaticamente.<br>
+          Inclui: © nome · ano · referência legal · DMCA.<br><br>
+          <em>"© [Nome] [Ano] | Lei 9.610/98 | Uso não autorizado é crime"</em>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-label">Fundo de demonstração</div>
+        <div class="color-row" id="bgSwatches">
+          <div class="color-swatch active" style="background:#888888" onclick="app.setBg(this,'#888888')"></div>
+          <div class="color-swatch" style="background:#2a4a6b" onclick="app.setBg(this,'#2a4a6b')"></div>
+          <div class="color-swatch" style="background:#3a6b3a" onclick="app.setBg(this,'#3a6b3a')"></div>
+          <div class="color-swatch" style="background:#6b3a3a" onclick="app.setBg(this,'#6b3a3a')"></div>
+          <div class="color-swatch" style="background:#f0e8d8" onclick="app.setBg(this,'#f0e8d8')"></div>
+          <div class="color-swatch" style="background:#1a1a1a" onclick="app.setBg(this,'#1a1a1a')"></div>
+        </div>
+      </div>
+
+      <div class="sidebar-section sidebar-actions">
+        <button class="btn-primary" onclick="app.downloadWatermark()">⬇ Baixar Marca D'água (PNG)</button>
+        <button class="btn-secondary" onclick="app.downloadInstructions()">📄 Exportar instruções de uso</button>
+      </div>
+
+    </aside>
+
+    <!-- CANVAS AREA -->
+    <main class="canvas-area">
+
+      <div class="canvas-toolbar">
+        <span class="canvas-toolbar-label">Pré-visualização · 1200 × 800px</span>
+        <button class="zoom-btn" onclick="document.querySelector('.canvas-wrapper').style.maxWidth='100%'">⤢ Expandir</button>
+        <button class="zoom-btn" onclick="document.querySelector('.canvas-wrapper').style.maxWidth='900px'">⤡ Reduzir</button>
+      </div>
+
+      <div class="canvas-wrapper">
+        <canvas id="wCanvas" width="1200" height="800"></canvas>
+      </div>
+
+      <div class="info-strip">
+        <div class="info-item">Resolução: <span>1200 × 800</span></div>
+        <div class="info-item">Formato: <span>PNG (transparente)</span></div>
+        <div class="info-item">Compatível: <span>Fotto · Alboom · Banlek · Fotop · Foco Radical</span></div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-card-title">⚠ Como usar nas plataformas</div>
+        <p>
+          <strong>Workflow recomendado:</strong> Aplique esta marca d'água sobre suas fotos <em>antes</em> do upload.
+          Use Lightroom (exportar com marca d'água), Photoshop (batch action) ou Watermarkly.com (online gratuito).
+          Todas as plataformas — <strong>Fotto, Alboom, Banlek, Fotop e Foco Radical</strong> — aceitam JPG com marca
+          d'água já aplicada. A foto limpa fica no seu computador e é entregue ao cliente <em>somente após a compra</em>.<br><br>
+          <strong>Proteção adicional:</strong> Grave seus metadados EXIF (nome, copyright, contato) antes do upload e
+          mantenha o RAW original como prova de autoria — ele serve como documento em caso de disputa judicial com base
+          na <strong>Lei 9.610/98</strong>.
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+
+</body>
+</html>
